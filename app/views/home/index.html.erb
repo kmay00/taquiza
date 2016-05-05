@@ -1,0 +1,8 @@
+<h1>Hola Welcome to Taquiza</h1>
+
+<%= image_tag('logo.png', class: "Wut", alt: "Taquiza Logo") %>
+
+<%= link_to("Want to see our menu?", "/menus" ) %>
+<p>Want to call us? <%= number_to_phone @phone, area_code: true %></p>
+<p>Want to know how popular we are? <%= pluralize @num_people, 'person' %> like us on facebook.</p>
+

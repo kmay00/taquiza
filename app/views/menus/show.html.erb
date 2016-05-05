@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @menu.description %>
+</p>
+
+<%#= debug @menu %>
+
+<ul>
+  <% @menu.categories.each do |cat| %>
+    <%= content_tag_for(:div, cat) do %>
+      <%= cat.name %>
+      <ol>
+        <%= render cat.dishes %>
+      </ol>
+    <% end %>
+
+  <% end %>
+</ul>
+
+<%= link_to 'Edit', edit_menu_path(@menu) %> |
+<%= link_to 'Back', menus_path %>
